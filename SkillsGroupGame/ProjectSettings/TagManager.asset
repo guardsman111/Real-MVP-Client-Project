@@ -41,3 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Triangles
+    uniqueID: 37054619
+    locked: 0

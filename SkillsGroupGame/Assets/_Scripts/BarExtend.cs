@@ -5,17 +5,38 @@ using UnityEngine.EventSystems;
 
 public class BarExtend : MonoBehaviour
 {
-    Transform t;
-    Vector3 grow = new Vector3(0.5f, 0.0f, 0.0f);
+    RectTransform t;
+    public GameObject point;
+    Vector2 grow = new Vector2(10f, 0.0f);
+
+    private bool growing = false;
+    private bool shrinking = false;
 
     private void Start()
     {
-        t = this.transform;
+        t = this.GetComponent<RectTransform>();
+    }
+
+    private void Update()
+    {
+        if (growing)
+        {
+            if (t.sizeDelta.x < 700.0f)
+                t.sizeDelta += grow;
+            else
+                growing = false;
+        }
+        else if (shrinking)
+        {
+            if (t.sizeDelta.x > 280.0f)
+                t.sizeDelta -= grow;
+            else
+                shrinking = false;
+        }
     }
 
     public void PointerEnter()
     {
-        Debug.Log("Triggered!");
         Grow();
     }
 
@@ -26,28 +47,22 @@ public class BarExtend : MonoBehaviour
 
     public void Grow()
     {
-        Debug.Log("Grow!");
-
-        while (t.localScale.x < 25.0f)
+        point.SetActive(true);
+        if (t.sizeDelta.x < 500.0f)
         {
-            Debug.Log("lol");
-            t.localScale += grow;
-            new WaitForSeconds(0.5f);
+            growing = true;
         }
-        
+
     }
+
 
     public void Shrink()
     {
-        Debug.Log("Shrink!");
-
-        while (t.localScale.x > 1f)
+        point.SetActive(false);
+        if (t.sizeDelta.x > 280.0f)
         {
-            t.localScale -= grow;
-            new WaitForSeconds(0.5f);
+            shrinking = true;
         }
-
-        
     }
 
   
