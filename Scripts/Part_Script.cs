@@ -80,11 +80,7 @@ public class Part_Script : MonoBehaviour
         {
             // If part slot is empty
             if (!collision.gameObject.GetComponent<Empty_Part_Script>().isFull)
-            {
-                if (emptyPos.gameObject.GetComponent<Empty_Part_Script>() != null)
-                    emptyPos.gameObject.GetComponent<Empty_Part_Script>().setFull(false);
-                emptyPos = collision.gameObject.transform;
-            }
+            emptyPos = collision.gameObject.transform;
         }
         Debug.Log(gameObject.name + "Collision");
     }
