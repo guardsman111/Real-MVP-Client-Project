@@ -18,7 +18,7 @@ public class Completion_Script : MonoBehaviour
         {
             globalScore = globalScore * 1.2f;
         }
-        this.GetComponent<Text>().text = ("Number of broken parts changed - " + brokenPartsChanged + "\n\nNumber of non-faulty parts changed - " + needlessPartsChanged + "\n\nNumber of repairs missed - " + brokenPartsMissed + "\n\nTime taken to effect repairs - " + TimeTaken + "\n\nTotal Score - \n" + (int)globalScore + " out of " + (brokenPartsChanged * 100) * 1.2);
+        this.GetComponent<Text>().text = ("Number of broken parts changed - " + brokenPartsChanged + "\n\nNumber of non-faulty parts changed - " + needlessPartsChanged + "\n\nNumber of repairs missed - " + brokenPartsMissed + "\n\nTime taken to effect repairs - " + TimeTaken + "\n\nTotal Score - \n" + (int)globalScore + " out of " + ((brokenPartsChanged + brokenPartsMissed) * 100) * 1.2);
         parent.SetActive(true);
     }
 
