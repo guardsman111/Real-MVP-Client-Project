@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bin
+  - Brake
+  - Alternator
+  - Wheel
+  - Suspension
+  - Gear Box
+  - Battery
+  - Exhaust
   layers:
   - Default
   - TransparentFX
@@ -13,7 +21,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Car
   - 
   - 
   - 
@@ -40,4 +48,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3683897181
+    locked: 0
+  - name: Car
+    uniqueID: 1813348831
+    locked: 0
+  - name: Empty Parts
+    uniqueID: 1791084809
+    locked: 0
+  - name: Part
+    uniqueID: 449056263
     locked: 0
