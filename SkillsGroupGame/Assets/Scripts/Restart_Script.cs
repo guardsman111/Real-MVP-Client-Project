@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Restart_Script : MonoBehaviour
 {
+    //Restarts the Scene
     public void Restart()
     {
         SceneManager.LoadScene("Car Repair Screen");

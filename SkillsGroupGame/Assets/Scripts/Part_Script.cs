@@ -47,6 +47,7 @@ public class Part_Script : MonoBehaviour
     // Drops the part
     private void OnMouseUp()
     {
+        //Deletes part and updates scores if over the bin, else returns part to its position
         if (overBin)
         {
             if (isBroken)
@@ -81,6 +82,7 @@ public class Part_Script : MonoBehaviour
             // If part slot is empty
             if (!collision.gameObject.GetComponent<Empty_Part_Script>().isFull)
             {
+                //Prevents the part slot from being filled by other parts of the same type passing over it
                 if (emptyPos.gameObject.GetComponent<Empty_Part_Script>() != null)
                     emptyPos.gameObject.GetComponent<Empty_Part_Script>().setFull(false);
                 emptyPos = collision.gameObject.transform;
@@ -89,6 +91,7 @@ public class Part_Script : MonoBehaviour
         Debug.Log(gameObject.name + "Collision");
     }
 
+    // Registers leaving the bin area
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Bin")

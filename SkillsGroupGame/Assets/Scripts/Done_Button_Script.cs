@@ -6,12 +6,14 @@ public class Done_Button_Script : MonoBehaviour
 {
     public GameObject partsParent;
     private Empty_Part_Script[] partsArray;
+    private Part_Script[] partsArray2;
     private int partsBroken = 0;
 
     public Completion_Script display;
 
     private bool allPartsOk = true;
 
+    // Checks all parts on the screen to see if they are broken, and checks that no part slots are empty
     public void CheckParts()
     {
         partsArray = partsParent.GetComponentsInChildren<Empty_Part_Script>();
@@ -21,6 +23,14 @@ public class Done_Button_Script : MonoBehaviour
             if (part.isFull == false)
             {
                 allPartsOk = false;
+            }
+        }
+        partsArray2 = partsParent.GetComponentsInChildren<Part_Script>();
+        foreach (Part_Script part in partsArray2)
+        {
+            if (part.isBroken)
+            {
+                partsBroken += 1;
             }
         }
         if (allPartsOk == true)
