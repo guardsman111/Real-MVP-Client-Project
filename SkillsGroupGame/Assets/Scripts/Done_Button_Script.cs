@@ -10,8 +10,10 @@ public class Done_Button_Script : MonoBehaviour
     private int partsBroken = 0;
 
     public Completion_Script display;
+    public AudioSource click;
 
     private bool allPartsOk = true;
+
 
     // Checks all parts on the screen to see if they are broken, and checks that no part slots are empty
     public void CheckParts()
@@ -36,11 +38,13 @@ public class Done_Button_Script : MonoBehaviour
         if (allPartsOk == true)
         {
             display.WriteResult(partsBroken, Time.timeSinceLevelLoad);
+            click.Play();
         }
         else
         {
             allPartsOk = true;
             display.MissingParts();
+            click.Play();
         }
     }
 

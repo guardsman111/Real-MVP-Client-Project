@@ -6,9 +6,11 @@ public class Part_Script : MonoBehaviour
 {
     private Camera sceneCamera;
     public Sprite brokenSprite;
+    public AudioSource brokenNoise;
     public Transform emptyPos;
     public bool isBroken = false;
 
+    public Sound_Manager soundManager;
     private bool overBin = false;
     public bool canBreak = false;
 
@@ -16,6 +18,7 @@ public class Part_Script : MonoBehaviour
     void Start()
     {
         sceneCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<Sound_Manager>();
 
         if (canBreak)
             CheckBroken();
@@ -29,12 +32,27 @@ public class Part_Script : MonoBehaviour
             isBroken = true;
 
         if (isBroken)
-            GetComponent<SpriteRenderer>().sprite = brokenSprite;
+        {
+            if (gameObject.tag == "Alternator")
+            {
+                soundManager.ChangeArrive(brokenNoise);
+                soundManager.PlayArrive();
+            }
+            else if (gameObject.tag == "Gear Box")
+                brokenNoise.Play();
+            else
+                GetComponent<SpriteRenderer>().sprite = brokenSprite;
+        }
+
+        else if (gameObject.tag == "Alternator")
+            soundManager.PlayArrive();
     }
 
     private void OnMouseDown()
     {
         Debug.Log("Mouse Down" + gameObject.name);
+        if (emptyPos.name != "Spawn")
+            soundManager.PartChange();
     }
 
     // Moves the part with the mouse
@@ -66,6 +84,7 @@ public class Part_Script : MonoBehaviour
         {
             transform.position = emptyPos.position;
             emptyPos.gameObject.GetComponent<Empty_Part_Script>().setFull(true);
+            soundManager.PartChange();
         }
     }
 
