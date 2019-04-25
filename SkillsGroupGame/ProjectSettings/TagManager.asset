@@ -49,6 +49,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Triangles
+    uniqueID: 37054619
   - name: Background
     uniqueID: 3683897181
     locked: 0
