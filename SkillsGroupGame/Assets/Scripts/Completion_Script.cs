@@ -11,7 +11,6 @@ public class Completion_Script : MonoBehaviour
     public static float brokenPartsChanged = 0;
     public static float needlessPartsChanged = 0;
     public Sound_Manager soundManager;
-
     public void Start()
     {
         soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<Sound_Manager>();

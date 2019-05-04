@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MainMenu.unity
+    guid: 8ab35b013245d6742b2a73633127c241
+  - enabled: 1
+    path: Assets/Scenes/Car Repair Screen.unity
+    guid: dd49909d30fa1554590d6aec6d05e0b8
+  - enabled: 1
+    path: Assets/Scenes/Bridge Builder.unity
+    guid: 9d4ae77565e15074cb32fc759864ed50
   m_configObjects: {}

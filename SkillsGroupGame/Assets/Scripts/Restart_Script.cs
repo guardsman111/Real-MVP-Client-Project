@@ -11,6 +11,6 @@ public class Restart_Script : MonoBehaviour
         Completion_Script.globalScore = 0;
         Completion_Script.brokenPartsChanged = 0;
         Completion_Script.needlessPartsChanged = 0;
-        SceneManager.LoadScene("Car Repair Screen");
+        SceneManager.LoadScene("AutomotiveFacts");
     }
 }
