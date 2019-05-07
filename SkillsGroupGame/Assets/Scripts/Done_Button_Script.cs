@@ -11,6 +11,7 @@ public class Done_Button_Script : MonoBehaviour
 
     public Completion_Script display;
     public AudioSource click;
+    public GameObject car;
 
     private bool allPartsOk = true;
 
@@ -37,6 +38,7 @@ public class Done_Button_Script : MonoBehaviour
         }
         if (allPartsOk == true)
         {
+            car.GetComponent<Animator>().SetBool("Arrived", false);
             display.WriteResult(partsBroken, Time.timeSinceLevelLoad);
             click.Play();
         }

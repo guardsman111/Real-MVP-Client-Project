@@ -14,6 +14,8 @@ public class Part_Script : MonoBehaviour
     private bool overBin = false;
     public bool canBreak = false;
 
+    public GameObject emitter;
+
     // Randomly declares the part broken or leaves it as its default, inspector set value.
     void Start()
     {
@@ -37,11 +39,27 @@ public class Part_Script : MonoBehaviour
             {
                 soundManager.ChangeArrive(brokenNoise);
                 soundManager.PlayArrive();
+                GetComponent<SpriteRenderer>().sprite = brokenSprite;
             }
             else if (gameObject.tag == "Gear Box")
                 brokenNoise.Play();
+            else if (gameObject.tag == "Brake")
+            {
+                emitter.GetComponent<ParticleSystem>().Play();
+                GetComponent<SpriteRenderer>().sprite = brokenSprite;
+            }
+            else if (gameObject.tag == "Exhaust")
+            {
+                emitter.GetComponent<ParticleSystem>().Play();
+            }
+            else if (gameObject.tag == "Battery")
+            {
+                emitter.GetComponent<Animator>().SetBool("Broken",true);
+                GetComponent<SpriteRenderer>().sprite = brokenSprite;
+            }
             else
                 GetComponent<SpriteRenderer>().sprite = brokenSprite;
+
         }
 
         else if (gameObject.tag == "Alternator")
@@ -51,6 +69,7 @@ public class Part_Script : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log("Mouse Down" + gameObject.name);
+        GetComponent<SpriteRenderer>().enabled = true;
         if (emptyPos.name != "Spawn")
             soundManager.PartChange();
     }
