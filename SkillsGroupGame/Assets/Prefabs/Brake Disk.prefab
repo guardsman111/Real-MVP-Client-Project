@@ -3,8 +3,7 @@
 --- !u!1 &8635419536271336125
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 5863043288050073176, guid: 1b3414cb57d91b94b924021fe39ade6f,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
@@ -24,12 +23,11 @@ GameObject:
 --- !u!4 &8635419535347413542
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 5863043288050073190, guid: 1b3414cb57d91b94b924021fe39ade6f,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8635419536271336125}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.7702956, y: -2.268105, z: 0.021484375}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
@@ -39,8 +37,7 @@ Transform:
 --- !u!212 &8635419536271336065
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 5863043288050073191, guid: 1b3414cb57d91b94b924021fe39ade6f,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8635419536271336125}
@@ -72,9 +69,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 449056263
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1a5ff6fe472c85a4c9ae5e3d33dce0d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c666be854b9512644bea30bec43524ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,8 +86,7 @@ SpriteRenderer:
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 5863043288050073187, guid: 1b3414cb57d91b94b924021fe39ade6f,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8635419536271336125}
@@ -110,8 +106,7 @@ Rigidbody2D:
 --- !u!61 &8635419536271336067
 BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 5863043288050073188, guid: 1b3414cb57d91b94b924021fe39ade6f,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8635419536271336125}
@@ -137,8 +132,7 @@ BoxCollider2D:
 --- !u!114 &8635419536271336124
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 5863043288050073189, guid: 1b3414cb57d91b94b924021fe39ade6f,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8635419536271336125}
@@ -147,6 +141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33cbece0feef7f24489539fc6edb7be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brokenSprite: {fileID: 21300000, guid: 6d6f1f42af0855548b6d3a736b515748, type: 3}
+  brokenSprite: {fileID: 21300000, guid: 0ee640c81ff2e6b4ebdb86b2ce2a53d1, type: 3}
+  brokenNoise: {fileID: 0}
   emptyPos: {fileID: 0}
   isBroken: 0
+  soundManager: {fileID: 0}
+  canBreak: 0
+  emitter: {fileID: 0}

@@ -9,6 +9,8 @@ public class Random_Car : MonoBehaviour
     public Sprite carRed;
     public Sprite carPurple;
     public Sprite carYellow;
+    public GameObject parts;
+    public GameObject newParts;
 
     private Sprite[] sprites;
 
@@ -19,5 +21,4 @@ public class Random_Car : MonoBehaviour
         int number = Random.Range(0, 4);
         gameObject.GetComponent<SpriteRenderer>().sprite = sprites[number];
     }
-
 }
