@@ -379,14 +379,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05988a9dc9bddf54e91cc3bc9b6386af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCredits: 0
+  isCredits: 1
   textBox: {fileID: 1632760644}
   facts:
-  - "Your average motor mechanic can earn \xA318-35'000 a year!"
-  - "Vehicle body repairers can earn \xA315-30'000 a year!"
-  - Skills group can help you find your place in a number of Automotive servicing
-    roles!
-  - Skills group holds a 82% success rate, above the national average of 72%!
+  - Created by Real MVP for the Skills Group. Special thanks to InspectorJ for letting
+    us use his engine sounds.
 --- !u!114 &678465933
 MonoBehaviour:
   m_ObjectHideFlags: 0

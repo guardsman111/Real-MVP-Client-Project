@@ -19,6 +19,7 @@ public class MainMenu : MonoBehaviour
     public void OpenSettings()
     {
         Debug.Log("Opening settings!");
+        SceneManager.LoadScene("Credits");
     }
 
     public void QuitGame()

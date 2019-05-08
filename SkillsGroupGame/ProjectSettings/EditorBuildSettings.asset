@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bridge Builder.unity
     guid: 9d4ae77565e15074cb32fc759864ed50
+  - enabled: 1
+    path: Assets/Scenes/AutomotiveFacts.unity
+    guid: c7fb6b142de79244da318b47f0859ea9
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 30546f07b61655a49be60a206ac93243
   m_configObjects: {}
